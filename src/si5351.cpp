@@ -838,11 +838,11 @@ void Si5351::pll_reset(enum si5351_pll target_pll)
 {
 	if(target_pll == SI5351_PLLA)
  	{
-    	si5351_write(SI5351_PLL_RESET, SI5351_PLL_RESET_A);
+    	si5351_write(SI5351_PLL_RESET, 0x0c | SI5351_PLL_RESET_A);
 	}
 	else if(target_pll == SI5351_PLLB)
 	{
-	    si5351_write(SI5351_PLL_RESET, SI5351_PLL_RESET_B);
+	    si5351_write(SI5351_PLL_RESET, 0x0c | SI5351_PLL_RESET_B);
 	}
 }
 
