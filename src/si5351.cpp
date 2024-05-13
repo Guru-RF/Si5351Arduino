@@ -113,6 +113,19 @@ bool Si5351::init(uint8_t xtal_load_c, uint32_t xo_freq, int32_t corr)
  */
 void Si5351::reset(void)
 {
+  si5351_write(SI5351_SSC_PARAM0, 0);
+	si5351_write(SI5351_SSC_PARAM1, 0);
+	si5351_write(SI5351_SSC_PARAM2, 0);
+	si5351_write(SI5351_SSC_PARAM3, 0);
+	si5351_write(SI5351_SSC_PARAM4, 0);
+	si5351_write(SI5351_SSC_PARAM5, 0);
+	si5351_write(SI5351_SSC_PARAM6, 0);
+	si5351_write(SI5351_SSC_PARAM7, 0);
+	si5351_write(SI5351_SSC_PARAM8, 0);
+	si5351_write(SI5351_SSC_PARAM9, 0);
+	si5351_write(SI5351_SSC_PARAM10, 0);
+	si5351_write(SI5351_SSC_PARAM11, 0);
+	si5351_write(SI5351_SSC_PARAM12, 0);
 	// Initialize the CLK outputs according to flowchart in datasheet
 	// First, turn them off
 	si5351_write(16, 0x80);
