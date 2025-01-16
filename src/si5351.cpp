@@ -90,7 +90,7 @@ bool Si5351::init(uint8_t xtal_load_c, uint32_t xo_freq, int32_t corr)
 		}
 		else
 		{
-			set_ref_freq(SI5351_XTAL_FREQ, SI5351_PLL_INPUT_XO);z
+			set_ref_freq(SI5351_XTAL_FREQ, SI5351_PLL_INPUT_XO);
       set_ref_freq(SI5351_XTAL_FREQ, SI5351_PLL_INPUT_CLKIN);
 		}
 
